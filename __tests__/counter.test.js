@@ -37,11 +37,16 @@ describe('Counter', () => {
   });
 });
 
-describe('OtherCounter', () => {
-  
-  test('should return error message if arguments are not a number with 0-2 decimal places', ()=> {
-    var counter = OtherCounter(5.99);
-    expect(counter).toBe(23);
-  });
 
+describe('OtherCounter', () => {
+  test('should return total pennies', ()=> {
+    var quarters = OtherCounter(599)(25);
+    var pennies = OtherCounter(599)(1);
+    var nickels = OtherCounter(599)(5);
+    var dimes = OtherCounter(599)(10);
+    expect(quarters).toBe(23);
+    expect(pennies).toBe(599);
+    expect(nickels).toBe(119);
+    expect(dimes).toBe(59);
+  });
 });
