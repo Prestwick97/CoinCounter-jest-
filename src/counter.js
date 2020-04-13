@@ -1,3 +1,4 @@
+// Recursive approach:
 export function Counter(number) {
   if (isNaN(number)) {
     return "invalid input";
@@ -34,3 +35,5 @@ export function coinCounter(cents, totalCoins = [0,0,0,0], counter = 0) {
     return coinCounter(remainingChange, totalCoins, newCounter);
   }
 }
+
+// Closure approach:

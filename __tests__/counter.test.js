@@ -1,4 +1,5 @@
 import { Counter } from './../src/counter.js';
+import { OtherCounter } from './../src/counter.js';
 
 describe('Counter', () => {
 
@@ -34,4 +35,13 @@ describe('Counter', () => {
     var counter = Counter(4.99);
     expect(counter[3]).toBe(4);
   });
+});
+
+describe('OtherCounter', () => {
+  
+  test('should return error message if arguments are not a number with 0-2 decimal places', ()=> {
+    var counter = OtherCounter(5.99);
+    expect(counter).toBe(23);
+  });
+
 });
