@@ -16,4 +16,22 @@ describe('Counter', () => {
     var counter = Counter(4.99);
     expect(counter[0]).toBe(19);
   });
+
+
+  test('should return number of dimes that make up the number', () => {
+    var counter = Counter(4.99);
+    expect(counter[1]).toBe(2);
+  });
+
+  
+  test('should return number of nickels that make up the number', () => {
+    var counter = Counter(4.99);
+    expect(counter[2]).toBe(0);
+  });
+
+
+  test('should return number of pennies that make up the number', () => {
+    var counter = Counter(4.99);
+    expect(counter[3]).toBe(4);
+  });
 });
