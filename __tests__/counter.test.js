@@ -3,7 +3,7 @@ import { Counter } from './../src/counter.js';
 describe('Counter', () => {
 
   test('should return error message if argument is not a number', () => {
-    const counter = Counter("hello");
+    var counter = Counter("hello");
     expect(counter).toBe("invalid input");
   });
 
@@ -14,6 +14,6 @@ describe('Counter', () => {
 
   test('should return number of quarters that make up the number', () => {
     var counter = Counter(4.99);
-    expect(counter).toBe(19);
+    expect(counter[0]).toBe(19);
   });
 });
