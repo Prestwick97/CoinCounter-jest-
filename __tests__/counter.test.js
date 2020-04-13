@@ -7,7 +7,8 @@ describe('Counter', () => {
     expect(counter).toBe("invalid input");
   });
 
-  // test('should return error message if arguments are not a number with 0-2 decimal places', () => {
-  //   var counter = Counter(5.987)
-  // });
+  test('should return error message if arguments are not a number with 0-2 decimal places', () => {
+    var counter = Counter(5.987)
+    expect(counter).toBe("invalid input");
+  });
 });
